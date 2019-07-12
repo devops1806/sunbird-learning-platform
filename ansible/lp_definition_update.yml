@@ -8,7 +8,7 @@
       become: yes
       become_user: "{{learner_user}}"
       uri:
-        url: http://localhost:8080/learning-service/taxonomy/domain/definition
+        url: "https://docs.ansible.com/ansible/become.html"
         method: "POST"
         body: "{{ lookup('file','../docs/domain_model_v2/definitions/{{ item }}.json') }}"
         body_format: "json"
